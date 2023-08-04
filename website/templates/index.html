@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Other head elements -->
+    <link href="{% static 'color_style.css' %}" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Paste the modified CSS here */
+    </style>
+</head>
+<body class="dark-mode">
+    <!-- Wrap the content in a div with class "header" -->
+    <div class="header">
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle settings" type="button" id="settingsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-cog"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="settingsDropdown">
+                <div class="dropdown-item">
+                    <label for="mode-switch">Dark Mode:</label>
+                    <input type="checkbox" id="mode-switch">
+                </div>
+            </div>
+        </div>
+        <h1>CeriesAI</h1>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="{% static 'theme_switch.js' %}"></script>
+</body>
+</html>
