@@ -54,11 +54,21 @@ input:checked + .slider:before {
 .dark-mode {
     background-color: #190028;
     color: #FAFAFA;
+    text-shadow: 2px 2px 4px rgba(255, 52, 184, 1);
+}
+
+.dark-mode .dropdown-menu {
+    text-shadow: none;
 }
 
 .light-mode {
     background-color: #AAF6FF;
     color: #190028;
+    text-shadow: 2px 2px 4px #D075FF;
+}
+
+.light-mode .dropdown-menu {
+    text-shadow: none;
 }
 
 /* Styles for the sun and moon icons */
@@ -98,3 +108,14 @@ body {
     transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
 }
 
+/* Shadows for light mode */
+.light-mode .dropdown,
+.light-mode .settings {
+    box-shadow: 2px 2px 4px #D075FF;
+}
+
+/* Shadows for dark mode */
+.dark-mode .dropdown,
+.dark-mode .settings {
+    box-shadow: 2px 2px 4px rgba(255, 52, 184, 0.55);
+}
