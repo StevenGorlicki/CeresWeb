@@ -1,3 +1,56 @@
+/* color_style.css */
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #f1c40f; /* The color of the slider when it is checked (light mode) */
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Dark mode styles */
 .dark-mode {
     background-color: #190028;
     color: #FAFAFA;
@@ -8,6 +61,19 @@
     color: #190028;
 }
 
+/* Styles for the sun and moon icons */
+.fa-sun {
+    color: #f39c12;
+}
+
+.fa-moon {
+    color: #f1c40f;
+}
+
+/* Additional CSS to position the settings icon and the text */
+.header {
+    position: relative;
+}
 
 .settings {
     position: absolute;
@@ -20,15 +86,15 @@
     margin-left: 10px;
 }
 
-/* Additional CSS to position the settings icon and the text */
-.header {
-    position: relative;
-}
-
 h1 {
-    position: absolute; /* Add position absolute */
-    top: 10px; /* Adjust this value to move the text down */
-    left: 15px; /* Adjust this value to move the text to the right */
+    position: absolute;
+    top: 10px;
+    left: 15px;
     margin: 0;
     padding: 0;
 }
+
+body {
+    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+

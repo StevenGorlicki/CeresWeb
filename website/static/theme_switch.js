@@ -1,17 +1,22 @@
-document.getElementById('mode-switch').addEventListener('click', function(event) {
-    let modeLabel = document.querySelector('label[for="mode-switch"]');
+document.getElementById('mode-switch').addEventListener('change', function(event) {
+    let modeIcon = document.getElementById('mode-icon');
     let body = document.querySelector('body');
+    let modeText = document.getElementById('mode-text');
 
     if (event.target.checked) {
         // if the checkbox is checked, use light mode
         body.classList.remove('dark-mode');
         body.classList.add('light-mode');
-        modeLabel.textContent = "Light Mode";
+        modeIcon.classList.remove('fa-moon');
+        modeIcon.classList.add('fa-sun');
+        modeText.textContent = "Light Mode";
     } else {
         // if the checkbox is unchecked, use dark mode
         body.classList.remove('light-mode');
         body.classList.add('dark-mode');
-        modeLabel.textContent = "Dark Mode";
+        modeIcon.classList.remove('fa-sun');
+        modeIcon.classList.add('fa-moon');
+        modeText.textContent = "Dark Mode";
     }
 
     // Prevent the dropdown from closing when clicking inside it

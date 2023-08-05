@@ -6,9 +6,6 @@
     <link href="{% static 'color_style.css' %}" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-    <style>
-        /* Paste the modified CSS here */
-    </style>
 </head>
 <body class="dark-mode">
     <!-- Wrap the content in a div with class "header" -->
@@ -19,8 +16,11 @@
             </button>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="settingsDropdown">
                 <div class="dropdown-item">
-                    <label for="mode-switch">Dark Mode:</label>
-                    <input type="checkbox" id="mode-switch">
+                    <label for="mode-switch"><span id="mode-text">Dark Mode</span> <i id="mode-icon" class="fas fa-moon"></i></label>
+                    <label class="switch">
+                        <input type="checkbox" id="mode-switch">
+                        <span class="slider"></span>
+                    </label>
                 </div>
             </div>
         </div>
