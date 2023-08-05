@@ -58,7 +58,7 @@ input:checked + .slider:before {
 }
 
 .dark-mode .dropdown-menu {
-    text-shadow: none;
+    text-shadow: none !important;
 }
 
 .light-mode {
@@ -68,7 +68,7 @@ input:checked + .slider:before {
 }
 
 .light-mode .dropdown-menu {
-    text-shadow: none;
+    text-shadow: none !important;
 }
 
 /* Styles for the sun and moon icons */
@@ -110,12 +110,40 @@ body {
 
 /* Shadows for light mode */
 .light-mode .dropdown,
-.light-mode .settings {
+.light-mode .settings,
+.light-mode .login-signup {
     box-shadow: 2px 2px 4px #D075FF;
 }
 
 /* Shadows for dark mode */
 .dark-mode .dropdown,
-.dark-mode .settings {
+.dark-mode .settings,
+.dark-mode .login-signup {
     box-shadow: 2px 2px 4px rgba(255, 52, 184, 0.55);
+}
+
+
+
+
+.login-signup {
+    position: absolute;
+    top: 10px;
+    right: 80px; /* Adjust this value as per your requirement */
+    height: 38px; /* Adjust to match height of settings icon */
+    padding: 0 10px; /* Horizontal padding for text */
+    line-height: 38px; /* Center text vertically */
+    background: #6c757d;
+    color: #fff;
+    border: none;
+    border-radius: 4px; /* half of the height to get circular edges */
+    cursor: pointer;
+    transition: 0.4s;
+    z-index: 999;
+}
+
+.dark-mode .login-signup {
+    text-shadow: none !important;
+}
+.light-mode .login-signup {
+    text-shadow: none !important;
 }
