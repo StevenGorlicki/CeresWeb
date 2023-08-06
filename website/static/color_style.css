@@ -1,5 +1,4 @@
 /* color_style.css */
-
 /* The switch - the box around the slider */
 .switch {
     position: relative;
@@ -52,7 +51,7 @@ input:checked + .slider:before {
 
 /* Dark mode styles */
 .dark-mode {
-    background-color: #190028;
+    background-color: #150021;
     color: #FAFAFA;
     text-shadow: 2px 2px 4px rgba(255, 52, 184, 1);
 }
@@ -141,9 +140,46 @@ body {
     z-index: 999;
 }
 
+
+.dark-mode .modal-body {
+    color: #190028;
+    background: #FAFAFA;
+}
+
+.light-mode .modal-body {
+    color: #190028;
+    background: #FAFAFA;
+}
+
+.dark-mode .modal-body {
+    text-shadow: none !important;
+}
+
+.light-mode .modal-body {
+    text-shadow: none !important;
+}
+
 .dark-mode .login-signup {
     text-shadow: none !important;
 }
 .light-mode .login-signup {
+    text-shadow: none !important;
+}
+
+
+
+.dark-mode .modal-title {
+    color: #190028;
+}
+
+.light-mode .modal-title {
+    color: #190028;
+}
+
+.dark-mode .modal-title {
+    text-shadow: none !important;
+}
+
+.light-mode .modal-title {
     text-shadow: none !important;
 }
