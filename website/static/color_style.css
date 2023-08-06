@@ -110,9 +110,14 @@ body {
 /* Shadows for light mode */
 .light-mode .dropdown,
 .light-mode .settings,
-.light-mode .login-signup {
+.light-mode .login-signup{
     box-shadow: 2px 2px 4px #D075FF;
 }
+
+.light-mode .stats-box {
+    box-shadow: 0px 0px 10px #D075FF;
+}
+
 
 /* Shadows for dark mode */
 .dark-mode .dropdown,
@@ -121,6 +126,9 @@ body {
     box-shadow: 2px 2px 4px rgba(255, 52, 184, 0.55);
 }
 
+.dark-mode .stats-box {
+    box-shadow: 0px 0px 10px rgba(255, 52, 184, 0.85);
+}
 
 
 
@@ -132,7 +140,7 @@ body {
     padding: 0 10px; /* Horizontal padding for text */
     line-height: 38px; /* Center text vertically */
     background: #6c757d;
-    color: #fff;
+    color: #FAFAFA;
     border: none;
     border-radius: 4px; /* half of the height to get circular edges */
     cursor: pointer;
@@ -183,3 +191,137 @@ body {
 .light-mode .modal-title {
     text-shadow: none !important;
 }
+
+
+
+/* BOX FOR CLASS STATS AND WELCOME*/
+
+
+/* Main stats box */
+.stats-box {
+    position: absolute;
+    top: 150px;
+    left: 50px;
+    width: 25%;  /* or specify a fixed width if you prefer, like 300px */
+    padding: 20px;
+    background-color: #6c757d; /* Dark background for visibility */
+    color: #FAFAFA;
+    border-radius: 10px;
+}
+
+.stats-sub-boxes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.stat {
+    flex: 1;
+    padding: 10px 4px;
+    margin: 5px;
+    text-align: center;
+    border: 1px solid #555;
+    border-radius: 8px;
+}
+
+.clickable-box {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 14px;
+    text-align: center;
+    background-color: #f1c40f;
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.4s ease-in-out;
+}
+
+.clickable-box:hover {
+    background-color: #d1a00f;
+}
+
+.dark-mode .stats-box {
+    text-shadow: none !important;
+}
+
+.light-mode .stats-box {
+    text-shadow: none !important;
+}
+
+.dark-mode .clickable-box {
+    text-shadow: none !important;
+}
+
+.light-mode .clickable-box {
+    text-shadow: none !important;
+}
+
+.stats-box h2 {
+    font-size: 27px;        /* Adjust the font size to your preference */
+}
+
+
+
+
+/* BOX FOR CLASS STATS AND WELCOME*/
+
+
+
+/* BOX FOR CREATING AND DISPLAYING CLASSES */
+
+
+
+
+.classes-container {
+    width: 400px; /* Example width. Adjust to fit your design */
+    border: 1px solid #555;
+    border-radius: 8px;
+    margin-right: 20px;
+    padding: 20px;
+}
+
+.classes-container h2 {
+    font-size: 24px; /* Example font-size */
+    margin-bottom: 20px;
+}
+
+.classes-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.classes-list {
+    flex: 2; /* This gives more space to the left side */
+    display: flex;
+    overflow-x: auto; /* Allows horizontal scrolling */
+    gap: 10px; /* Gap between classes */
+}
+
+.class-item {
+    width: 140px; /* Example width for individual class items */
+    height: 60px; /* Example height */
+    border: 1px solid #555;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.create-class {
+    flex: 1; /* This gives less space to the right side */
+    height: 120px; /* This makes it taller than it is wide */
+    border: 1px solid #555;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; /* Indicates it's clickable */
+}
+
+
+
+
+/* BOX FOR CREATING AND DISPLAYING CLASSES */
+
+
+
