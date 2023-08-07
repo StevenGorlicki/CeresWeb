@@ -198,7 +198,7 @@ body {
 
 
 /* Main stats box */
-.stats-box {
+.dark-mode .stats-box {
     position: absolute;
     top: 150px;
     left: 50px;
@@ -206,6 +206,17 @@ body {
     padding: 20px;
     background-color: #6c757d; /* Dark background for visibility */
     color: #FAFAFA;
+    border-radius: 10px;
+}
+
+.light-mode .stats-box {
+    position: absolute;
+    top: 150px;
+    left: 50px;
+    width: 25%;  /* or specify a fixed width if you prefer, like 300px */
+    padding: 20px;
+    background-color: #FAFAFA;
+    color: #150021;
     border-radius: 10px;
 }
 
@@ -265,63 +276,8 @@ body {
 
 
 
+
+
 /* BOX FOR CLASS STATS AND WELCOME*/
-
-
-
-/* BOX FOR CREATING AND DISPLAYING CLASSES */
-
-
-
-
-.classes-container {
-    width: 400px; /* Example width. Adjust to fit your design */
-    border: 1px solid #555;
-    border-radius: 8px;
-    margin-right: 20px;
-    padding: 20px;
-}
-
-.classes-container h2 {
-    font-size: 24px; /* Example font-size */
-    margin-bottom: 20px;
-}
-
-.classes-content {
-    display: flex;
-    justify-content: space-between;
-}
-
-.classes-list {
-    flex: 2; /* This gives more space to the left side */
-    display: flex;
-    overflow-x: auto; /* Allows horizontal scrolling */
-    gap: 10px; /* Gap between classes */
-}
-
-.class-item {
-    width: 140px; /* Example width for individual class items */
-    height: 60px; /* Example height */
-    border: 1px solid #555;
-    border-radius: 8px;
-    padding: 10px;
-}
-
-.create-class {
-    flex: 1; /* This gives less space to the right side */
-    height: 120px; /* This makes it taller than it is wide */
-    border: 1px solid #555;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer; /* Indicates it's clickable */
-}
-
-
-
-
-/* BOX FOR CREATING AND DISPLAYING CLASSES */
-
 
 
