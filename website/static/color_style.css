@@ -1,5 +1,10 @@
 /* color_style.css */
-/* The switch - the box around the slider */
+
+
+
+/* All of this section is code for the Dark Mode/Light Mode Slider (It's a lot it's gross) */
+
+
 .switch {
     position: relative;
     display: inline-block;
@@ -43,31 +48,11 @@ input:checked + .slider {
     background-color: #f1c40f; /* The color of the slider when it is checked (light mode) */
 }
 
+/* Slider transitions / Smooth Animation */
 input:checked + .slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
-}
-
-/* Dark mode styles */
-.dark-mode {
-    background-color: #150021;
-    color: #FAFAFA;
-    text-shadow: 2px 2px 4px rgba(255, 52, 184, 1);
-}
-
-.dark-mode .dropdown-menu {
-    text-shadow: none !important;
-}
-
-.light-mode {
-    background-color: #AAF6FF;
-    color: #190028;
-    text-shadow: 2px 2px 4px #D075FF;
-}
-
-.light-mode .dropdown-menu {
-    text-shadow: none !important;
 }
 
 /* Styles for the sun and moon icons */
@@ -79,7 +64,49 @@ input:checked + .slider:before {
     color: #f1c40f;
 }
 
-/* Additional CSS to position the settings icon and the text */
+
+/* End of Slider Code */
+
+
+
+/* Dark mode setup */
+
+
+.dark-mode {
+    background-color: #150021;
+    color: #FAFAFA;
+    text-shadow: 2px 2px 4px rgba(255, 52, 184, 1);
+}
+
+.dark-mode .dropdown-menu {
+    text-shadow: none !important;
+}
+
+
+/* End Dark mode */
+
+
+/* Light Mode setup */
+
+
+.light-mode {
+    background-color: #AAF6FF;
+    color: #150021;
+    text-shadow: 2px 2px 4px #D075FF;
+}
+
+.light-mode .dropdown-menu {
+    text-shadow: none !important;
+}
+
+
+/* End Light mode */
+
+
+
+/* General Header CSS For positioning of Headers */
+
+
 .header {
     position: relative;
 }
@@ -88,6 +115,8 @@ input:checked + .slider:before {
     position: absolute;
     top: 10px;
     right: 10px;
+    border: 1px solid black !important;
+    border-radius: 4px !important;
     z-index: 999; /* Ensure the settings icon appears above other elements */
 }
 
@@ -97,17 +126,43 @@ input:checked + .slider:before {
 
 h1 {
     position: absolute;
-    top: 10px;
+    top: 4px;
     left: 15px;
     margin: 0;
     padding: 0;
 }
 
+
+/* End Header CSS */
+
+/* Gives full body / Background color transition */
 body {
-    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+    transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* Shadows for light mode */
+/* Changes Colors on hover */
+
+
+.dropdown:hover {
+    background-color: #d1a00f;
+}
+/* Needs important to override online settings */
+.settings:hover {
+    background-color: #d1a00f !important;
+}
+.login-signup:hover {
+    background-color: #d1a00f;
+}
+
+
+/* End Changes Colors on hover */
+
+
+
+/* Shadows for light and dark mode */
+
+
+/* light mode */
 .light-mode .dropdown,
 .light-mode .settings,
 .light-mode .login-signup{
@@ -119,7 +174,7 @@ body {
 }
 
 
-/* Shadows for dark mode */
+/* dark mode */
 .dark-mode .dropdown,
 .dark-mode .settings,
 .dark-mode .login-signup {
@@ -131,6 +186,8 @@ body {
 }
 
 
+/* End Shadows for light and dark mode */
+
 
 .login-signup {
     position: absolute;
@@ -141,7 +198,7 @@ body {
     line-height: 38px; /* Center text vertically */
     background: #6c757d;
     color: #FAFAFA;
-    border: none;
+    border: 1px solid black;
     border-radius: 4px; /* half of the height to get circular edges */
     cursor: pointer;
     transition: 0.4s;
@@ -150,12 +207,12 @@ body {
 
 
 .dark-mode .modal-body {
-    color: #190028;
+    color: #150021;
     background: #FAFAFA;
 }
 
 .light-mode .modal-body {
-    color: #190028;
+    color: #150021;
     background: #FAFAFA;
 }
 
@@ -177,11 +234,11 @@ body {
 
 
 .dark-mode .modal-title {
-    color: #190028;
+    color: #150021;
 }
 
 .light-mode .modal-title {
-    color: #190028;
+    color: #150021;
 }
 
 .dark-mode .modal-title {
@@ -207,6 +264,7 @@ body {
     background-color: #6c757d; /* Dark background for visibility */
     color: #FAFAFA;
     border-radius: 10px;
+    transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
 }
 
 .light-mode .stats-box {
@@ -218,6 +276,7 @@ body {
     background-color: #FAFAFA;
     color: #150021;
     border-radius: 10px;
+    transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
 }
 
 .stats-sub-boxes {
@@ -246,7 +305,7 @@ body {
     border-radius: 8px;
     cursor: pointer;
     text-decoration: none;
-    transition: background-color 0.4s ease-in-out;
+    transition: background-color 0.35s ease-in-out;
 }
 
 .clickable-box:hover {
@@ -273,11 +332,54 @@ body {
     font-size: 27px;        /* Adjust the font size to your preference */
 }
 
+.signup-modal-body {
+    color: #150021;
+    background: #FAFAFA;
+}
+
+.signup-modal-title {
+    color: #150021;
+}
+
+.signup-modal-title {
+    text-shadow: none !important;
+}
+
+.signup-modal-body {
+    text-shadow: none !important;
+}
 
 
+.button-group {
+    position: absolute;
+    top: 10px;
+    left: calc(100px + 15px + 75px); /* 100px for margin, 15px to match padding of h1, 75px to move it 75 pixels to the right */
+    display: flex;
+    align-items: center;
+}
+.dark-mode .header-button {
+    box-shadow: 2px 2px 4px rgba(255, 52, 184, 0.55);
+}
 
+.light-mode .header-button {
+    box-shadow: 2px 2px 4px #D075FF;
+}
+.header-button {
+    height: 38px;
+    padding: 0px 10px;
+    line-height: 38px;
+    background: #6c757d;
+    color: #FAFAFA;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.4s;
+    margin-right: 10px;
+}
 
-
+.header-button:hover {
+    background-color: #d1a00f;
+}
 /* BOX FOR CLASS STATS AND WELCOME*/
 
 
