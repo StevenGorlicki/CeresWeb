@@ -188,7 +188,7 @@ body {
 
 /* End Shadows for light and dark mode */
 
-
+/* login positioning */
 .login-signup {
     position: absolute;
     top: 10px;
@@ -206,6 +206,9 @@ body {
 }
 
 
+/* Force Same Color in both Modes */
+
+
 .dark-mode .modal-body {
     color: #150021;
     background: #FAFAFA;
@@ -215,6 +218,13 @@ body {
     color: #150021;
     background: #FAFAFA;
 }
+
+
+/* End Force Same Color in both Modes */
+
+
+/* Forces no text shadows inside forms, small color change */
+
 
 .dark-mode .modal-body {
     text-shadow: none !important;
@@ -231,8 +241,6 @@ body {
     text-shadow: none !important;
 }
 
-
-
 .dark-mode .modal-title {
     color: #150021;
 }
@@ -248,6 +256,10 @@ body {
 .light-mode .modal-title {
     text-shadow: none !important;
 }
+
+
+/* End Forces no text shadows inside forms, small color change */
+
 
 
 
@@ -308,6 +320,10 @@ body {
     transition: background-color 0.35s ease-in-out;
 }
 
+
+/* Color and Text shadow force fixes */
+
+
 .clickable-box:hover {
     background-color: #d1a00f;
 }
@@ -350,6 +366,10 @@ body {
 }
 
 
+/* Color and Text shadow force fixes */
+
+
+/* 3 Header Buttons Positioning and Color Code */
 .button-group {
     position: absolute;
     top: 10px;
@@ -380,6 +400,12 @@ body {
 .header-button:hover {
     background-color: #d1a00f;
 }
+
+
+/* 3 Header Buttons Positioning and Color Code */
+
+
+
 /* BOX FOR CLASS STATS AND WELCOME*/
 
 
