@@ -189,9 +189,7 @@ body {
     box-shadow: 2px 2px 4px rgba(255, 52, 184, 0.55);
 }
 
-.dark-mode .stats-box,
-.dark-mode .class-list,
-.dark-mode .forms-list,
+
 .dark-mode .class-list-right,
 .dark-mode .class-list-left,
 .dark-mode .clickable-box,
@@ -200,7 +198,11 @@ body {
 .dark-mode .forms-list-left {
     box-shadow: 0px 0px 10px rgba(255, 52, 184, 0.85);
 }
-
+.dark-mode .stats-box,
+.dark-mode .class-list,
+.dark-mode .forms-list {
+    box-shadow: 0px 0px 10px rgba(255, 52, 184, 1);
+}
 
 /* End Shadows for light and dark mode */
 
