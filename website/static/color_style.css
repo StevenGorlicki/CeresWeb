@@ -92,7 +92,7 @@ input:checked + .slider:before {
 .light-mode {
     background-color: #AAF6FF;
     color: #150021;
-    text-shadow: 2px 2px 4px #D075FF;
+    text-shadow: 2px 2px 4px rgb(208, 117, 255, .7);
 }
 
 .light-mode .dropdown-menu {
@@ -165,11 +165,19 @@ body {
 /* light mode */
 .light-mode .dropdown,
 .light-mode .settings,
-.light-mode .login-signup{
+.light-mode .login-signup {
     box-shadow: 2px 2px 4px #D075FF;
 }
 
-.light-mode .stats-box {
+.light-mode .stats-box,
+.light-mode .class-list,
+.light-mode .forms-list,
+.light-mode .class-list-right,
+.light-mode .class-list-left,
+.light-mode .clickable-box,
+.light-mode .stat,
+.light-mode .forms-list-right,
+.light-mode .forms-list-left {
     box-shadow: 0px 0px 10px #D075FF;
 }
 
@@ -181,7 +189,15 @@ body {
     box-shadow: 2px 2px 4px rgba(255, 52, 184, 0.55);
 }
 
-.dark-mode .stats-box {
+.dark-mode .stats-box,
+.dark-mode .class-list,
+.dark-mode .forms-list,
+.dark-mode .class-list-right,
+.dark-mode .class-list-left,
+.dark-mode .clickable-box,
+.dark-mode .stat,
+.dark-mode .forms-list-right,
+.dark-mode .forms-list-left {
     box-shadow: 0px 0px 10px rgba(255, 52, 184, 0.85);
 }
 
@@ -402,10 +418,206 @@ body {
 }
 
 
-/* 3 Header Buttons Positioning and Color Code */
+/* End 3 Header Buttons Positioning and Color Code */
 
 
 
-/* BOX FOR CLASS STATS AND WELCOME*/
 
 
+
+
+
+
+
+
+
+
+.dark-mode .class-list {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 150px;
+    right: 50px; /* position the box to the right */
+    width: 40%;  /* or specify a fixed width if you prefer, like 300px */
+    padding: 20px;
+    background-color: #6c757d; /* Dark background for visibility */
+    color: #FAFAFA;
+    border-radius: 10px;
+    transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
+}
+
+.light-mode .class-list {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 150px;
+    right: 50px; /* position the box to the right */
+    width: 40%;  /* or specify a fixed width if you prefer, like 300px */
+    padding: 20px;
+    background-color: #FAFAFA;
+    color: #150021;
+    border-radius: 10px;
+    transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
+}
+
+
+
+.dark-mode .class-list {
+    text-shadow: none !important;
+}
+
+.light-mode .class-list {
+    text-shadow: none !important;
+}
+
+
+
+.class-list-header {
+    padding: 10px 0;  /* adding some vertical padding to separate it from the boxes */
+    font-weight: bold;
+    font-size: 24px;
+}
+
+/* CSS for the container of the two sections */
+.class-list-content {
+    display: flex;  /* use flexbox layout */
+    flex-direction: row;  /* layout children in a row */
+    margin-top: 20px;  /* space below the header */
+}
+
+.class-list-left {
+    flex: 2;  /* 2 parts of the 3 parts */
+    padding: 10px;  /* space around the box */
+    border: 1px solid #555;  /* optional: a border for visual clarity */
+    margin-right: 15px;  /* space between the left and right boxes */
+    border-radius: 10px;
+}
+
+.dark-mode .class-list-right {
+    flex: 1;  /* 1 part of the 3 parts */
+    padding: 10px;  /* space around the box */
+    border: 1px solid #555;  /* optional: a border for visual clarity */
+    border-radius: 10px;
+    height: 220px;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #FAFAFA;
+    background-color: #6c757d;
+    transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
+}
+.dark-mode .class-list-right:hover {
+    background-color: #d1a00f;
+}
+
+.light-mode .class-list-right:hover {
+    background-color: #d1a00f;
+}
+
+.light-mode .class-list-right {
+    flex: 1;  /* 1 part of the 3 parts */
+    padding: 10px;  /* space around the box */
+    border: 1px solid #555;  /* optional: a border for visual clarity */
+    border-radius: 10px;
+    height: 220px;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    background-color: #FAFAFA;
+    transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
+}
+
+.class-list {
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+/* New styles for forms-list, which are identical to class-list */
+.dark-mode .forms-list {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 390px; /* Adjusted this to account for the height of the first form and the 10px gap */
+    right: 50px;
+    width: 40%;
+    padding: 20px;
+    background-color: #6c757d;
+    color: #FAFAFA;
+    border-radius: 10px;
+    transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
+}
+
+.light-mode .forms-list {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 390px; /* Adjusted this to account for the height of the first form and the 10px gap */
+    right: 50px;
+    width: 40%;
+    padding: 20px;
+    background-color: #FAFAFA;
+    color: #150021;
+    border-radius: 10px;
+    transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
+}
+
+/* Text shadow removal (if required) */
+.dark-mode .forms-list {
+    text-shadow: none !important;
+}
+
+.light-mode .forms-list {
+    text-shadow: none !important;
+}
+
+.forms-list-header {
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.forms-list-content {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.forms-list-left {
+    flex: 2;
+    padding: 10px;
+    border: 1px solid #555;
+    margin-right: 15px;
+    border-radius: 10px;
+}
+
+.dark-mode .forms-list-right, .light-mode .forms-list-right {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 10px;
+    height: 220px;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
+}
+
+.dark-mode .forms-list-right {
+    color: #FAFAFA;
+    background-color: #6c757d;
+}
+
+.light-mode .forms-list-right {
+    background-color: #FAFAFA;
+}
+
+.dark-mode .forms-list-right:hover, .light-mode .forms-list-right:hover {
+    background-color: #d1a00f;
+}
