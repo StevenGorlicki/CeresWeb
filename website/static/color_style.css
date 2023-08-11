@@ -115,7 +115,7 @@ input:checked + .slider:before {
     position: absolute;
     top: 10px;
     right: 10px;
-    border: 1px solid black !important;
+    border: 1px solid #555 !important;
     border-radius: 4px !important;
     z-index: 999; /* Ensure the settings icon appears above other elements */
 }
@@ -214,7 +214,7 @@ body {
     line-height: 38px; /* Center text vertically */
     background: #6c757d;
     color: #FAFAFA;
-    border: 1px solid black;
+    border: 1px solid #555;
     border-radius: 4px; /* half of the height to get circular edges */
     cursor: pointer;
     transition: 0.4s;
@@ -329,7 +329,7 @@ body {
     text-align: center;
     background-color: #f1c40f;
     color: #333;
-    border: none;
+    border: 1px solid #555;
     border-radius: 8px;
     cursor: pointer;
     text-decoration: none;
@@ -406,7 +406,7 @@ body {
     line-height: 38px;
     background: #6c757d;
     color: #FAFAFA;
-    border: 1px solid black;
+    border: 1px solid #555;
     border-radius: 4px;
     cursor: pointer;
     transition: 0.4s;
@@ -438,7 +438,6 @@ body {
     position: absolute;
     top: 150px;
     right: 50px; /* position the box to the right */
-    width: 40%;  /* or specify a fixed width if you prefer, like 300px */
     padding: 20px;
     background-color: #6c757d; /* Dark background for visibility */
     color: #FAFAFA;
@@ -452,7 +451,6 @@ body {
     position: absolute;
     top: 150px;
     right: 50px; /* position the box to the right */
-    width: 40%;  /* or specify a fixed width if you prefer, like 300px */
     padding: 20px;
     background-color: #FAFAFA;
     color: #150021;
@@ -546,7 +544,6 @@ body {
     position: absolute;
     top: 390px; /* Adjusted this to account for the height of the first form and the 10px gap */
     right: 50px;
-    width: 40%;
     padding: 20px;
     background-color: #6c757d;
     color: #FAFAFA;
@@ -560,7 +557,6 @@ body {
     position: absolute;
     top: 390px; /* Adjusted this to account for the height of the first form and the 10px gap */
     right: 50px;
-    width: 40%;
     padding: 20px;
     background-color: #FAFAFA;
     color: #150021;
@@ -620,4 +616,25 @@ body {
 
 .dark-mode .forms-list-right:hover, .light-mode .forms-list-right:hover {
     background-color: #d1a00f;
+}
+
+
+
+.list-container {
+    position: absolute;
+    top: 150px;
+    right: 50px;
+    width: 40%; /* This was the width you set for your class-list. You can adjust it if needed. */
+}
+
+.class-list, .forms-list {
+    width: 100%; /* Makes them occupy the full width of the container */
+    margin-bottom: 20px; /* Adds some space between the class-list and forms-list */
+}
+
+.dark-mode .class-list, .light-mode .class-list,
+.dark-mode .forms-list, .light-mode .forms-list {
+    position: static; /* Removes the absolute positioning. */
+    top: auto;
+    right: auto;
 }
