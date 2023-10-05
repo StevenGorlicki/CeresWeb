@@ -1,4 +1,4 @@
-# Web Designer for CeriesAI, A data-driven Lesson planner built to empower educators in the classroom. 
+# Web Designer for CeriesAI, A data-driven lesson planner built to empower educators in the classroom. 
 
 Current WebLink:  @https://ceresai.vercel.app/
 
