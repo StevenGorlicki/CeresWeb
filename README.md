@@ -5,8 +5,8 @@ Current WebLink:  @https://ceresai.vercel.app/
 Company Linkedin: @https://www.linkedin.com/company/ceresai/about/
 
 My Websites, 
-Linkedin: 
-Handshake: 
+Linkedin: https://www.linkedin.com/in/steven-gorlicki-57b059284/
+Handshake: https://app.joinhandshake.com/stu/users/45142002
 
 Professional build for educators in progress
 
