@@ -1,10 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-</head>
-<body>
+    <style>
+        /* Some basic styling for the form */
+        .form-container {
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+        }
 
+        .form-container label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .checkbox-container {
+            margin-top: 10px;
+        }
+
+        .checkbox-container label {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <form action="#" method="post">
+            <!-- First Name Input -->
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" required>
+
+            <!-- Last Name Input -->
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" required>
+
+            <!-- Checkboxes -->
+            <div class="checkbox-container">
+                <label><input type="checkbox" name="checkbox1" value="option1"> Option 1</label>
+                <label><input type="checkbox" name="checkbox2" value="option2"> Option 2</label>
+                <label><input type="checkbox" name="checkbox3" value="option3"> Option 3</label>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 </body>
+
 </html>
