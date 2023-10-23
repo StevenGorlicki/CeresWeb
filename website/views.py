@@ -4,3 +4,9 @@ from django.shortcuts import render
 
 def index(request):
     return render(request, 'index.html', {})
+
+
+def student_forms(request):
+    return render(request, 'student_forms.html', {})
+
+
