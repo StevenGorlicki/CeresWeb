@@ -10,10 +10,10 @@ Handshake: https://app.joinhandshake.com/stu/users/45142002
 
 Professional build for educators in progress
 
- * web is now being published                                 
+ * web is now being published, until web is published, you must set DEBUG = TRUE in your private repository to view via the steps below.                                
 
 Should be viewable by forking the repository
-* When in terminal, enter directory mysite ("CD mysite") as you should already be in the parent directories
+* When in terminal, enter directory mysite ("CD mysite") as you should already be in the parent directories (IF NEEDED)
 * Enter python manage.py runserver
 * open Localhost#8000 in your browser
   
